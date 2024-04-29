@@ -1,0 +1,2 @@
+1. The bug was that `num1` and `num2` are both `strings` inputs, which means that taking their sum would essentially concatenate them instead of adding them numerically. For example, inputting `2` and `3`, we would expect `5`, but the code gives `23`.
+2. One possible fix is to convert `num1` and `num2` into numbers before taking their sum. That way, Javascript will know to do arithmetic instead of concatenating. (See screenshots folder)
