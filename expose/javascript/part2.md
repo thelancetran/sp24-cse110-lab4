@@ -1,11 +1,11 @@
 1. Line 12 prints `3` because `i` is declared as a `var` and so it can be accessed within the function even outside of the for-block it was declared in. Within the for-loop, `i` iterates until 3, where it stops and exits the for-loop.
 2. Line 13 prints `150` because, similar to the previous, `discountedPrice` is a var, and so it can be accessed within the function outside the for-block. Also note that `discountedPrice` saves the last value, which is 300 * (0.5) = 150.
-3. Line 14 prints `15000` because we have 150 * 100 = 15,000. Also, the code in line 14 is within the scope of `finalPrice`, so it is accessible.
-4. The function will return `[ 5000, 10000, 15000 ]` because we declare an array var called `discounted` to be returned, where for each element in `prices`, we calculate the discounted price, multiply it by 100, and then push it into `discounted`.
+3. Line 14 prints `150` because we have round(150 * 100) / 100 = 150. Also, the code in line 14 is within the scope of `finalPrice`, so it is accessible.
+4. The function will return `[ 50, 100, 150 ]` because we declare an array var called `discounted` to be returned, where for each element in `prices`, we calculate the discounted price, round the price, and then push it into `discounted`.
 5. The code will cause an error because we use `let` to declare `i` in the for-loop. Thus, `i` is only within scope of the for-block.
 6. The code will cause an error because we use `let` to declare `discountedPrice` within the for-loop. Thus, it is only accessible within the for-block.
-7. Line 14 will print `15000`. The logic follows from question 3. We also note that `finalPrice` was initialized within the function, outside the for-block and line 14 is within the scope of the function.
-8. Similar to question 4, the function will return `[ 5000, 10000, 15000 ]`. The same logic applies of initializing an array, calculating the price & pushing them into the array, and then returning the array.
+7. Line 14 will print `150`. The logic follows from question 3. We also note that `finalPrice` was initialized within the function, outside the for-block and line 14 is within the scope of the function.
+8. Similar to question 4, the function will return `[ 50, 100, 150 ]`. The same logic applies of initializing an array, calculating the price, rounding the price, pushing them into the array, and then returning the array.
 9. The code causes an error similar to question 5 because we declared `i` using `let`, which means that `i` is only in the scope of the for-block.
 10. Line 12 will print `3` because we use `length` is defined within the scope of the function, and line 12 is within the function. Also, `length` is initialized to the size of the `prices` array, which is 3.
 11. The function will return `[ 50, 100, 150 ]`. The function initializes an array `discounted` and uses a for-loop to iterate through each price in `prices`, where for each price, it calculates the discounted price and pushes it into the `discounted` array. The function returns `discounted`.
